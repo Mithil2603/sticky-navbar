@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: greenyellow;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+nav {
+    width: 90%;
+    margin: auto;
+    height: inherit;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+nav > ul {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+nav > ul > a > li {
+    list-style: none;
+}
+
+@media (max-width: 583px) {
+    nav > ul {
+        display: none;
+    }
+}
+
+.sidebar {
+    position: fixed; /* Use fixed for overlay effect */
+    background-color: black;
+    width: 50vw;
+    height: 100%;
+    top: 0;
+    right: -50vw; /* Initially hidden off-screen */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 2rem;
+    transition: right 0.3s ease; /* Smooth transition */
+}
+
+.sidebar.show {
+    right: 0; /* When shown, bring it to the screen */
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.sidebar li {
+    padding: 10px 0;
+    border-bottom: 1px solid greenyellow;
+}
+
+.sidebar a {
+    text-decoration: none;
+    color: greenyellow;
+}
+
+.transparent {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+@media (min-width: 583px) {
+    .sidebar, .transparent {
+        display: none;
+    }
+}
+
+/* Section styles */
+section {
+    background-color: black;
+    padding: 2rem 0;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.container p {
+    margin-bottom: 2rem;
+}
